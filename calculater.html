@@ -1,0 +1,101 @@
+<html>
+	<head>
+		<title>Calculator</title>
+		
+		<style type="text/css">
+			#frame
+			{
+				background-color:#a83632;
+				background-repeat: no-repeat;
+				background-size: 150%;
+				width: 68%;
+				height: 98%;
+				border: 10px outset darkgray;
+				margin-left: 150PX;
+			}
+			#res
+			{
+				background-color: #4b6f59;
+				margin: 2%;
+				width: 93%;
+				height: 15%;
+				border: 10px inset darkgray;
+				color: white;
+				font-size: 40px;
+			}
+			table
+			{
+				margin-left: 10%;
+				width: 80%;
+				height: 65%;
+				background-color: #175a99 ;
+			}
+			td
+			{
+				background-color: black;
+				color: white;
+				font-weight: bold;	
+				font-size: 180%;
+				text-align: center;
+				border: 5px ridge gray;
+				width: 10%;
+				
+			}
+			input
+			{
+				width: 100%;
+				height: 100%;
+				background-color: black;
+				color: white;
+				font-weight: bold;	
+				font-size: 180%;
+				text-align: center;
+			}
+			#deleten
+			{
+				background-color: red;
+				font-size: 50px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="frame">
+			<form name="calculator">
+				<input type="text" disabled name="display" id="res"/>
+					<table border="12px" cellspacing="12%">
+						<tr>
+							<td><input type="button" value="7" onclick="calculator.display.value=calculator.display.value+'7'"/></td>
+							<td><input type="button" value="8" onclick="calculator.display.value=calculator.display.value+'8'"/></td>
+							<td><input type="button" value="9" onclick="calculator.display.value=calculator.display.value+'9'"/></td>
+							<td><input type="button" value="&div;" onclick="calculator.display.value=calculator.display.value+'/'"/></td>
+						</tr>
+						<tr>
+							<td><input type="button" value="4" onclick="calculator.display.value=calculator.display.value+'4'"/></td>
+							<td><input type="button" value="5" onclick="calculator.display.value=calculator.display.value+'5'"/></td>
+							<td><input type="button" value="6" onclick="calculator.display.value=calculator.display.value+'6'"/></td>
+							<td><input type="button" value="*" onclick="calculator.display.value=calculator.display.value+'*'"/></td>
+						</tr>
+						<tr>
+							<td><input type="button" value="3" onclick="calculator.display.value=calculator.display.value+'3'"/></td>
+							<td><input type="button" value="2" onclick="calculator.display.value=calculator.display.value+'2'"/></td>
+							<td><input type="button" value="1" onclick="calculator.display.value=calculator.display.value+'1'"/></td>
+							<td><input type="button" value="-" onclick="calculator.display.value=calculator.display.value+'-'"/></td>
+						</tr>
+						<tr>
+							<td><input type="button" value="0" onclick="calculator.display.value=calculator.display.value+'0'"/></td>
+							<td><input type="button" value="." onclick="calculator.display.value=calculator.display.value+'.'"/></td>
+							<td><input type="button" value="=" onclick="calculator.display.value=eval(calculator.display.value)"/></td>
+							<td><input type="button" value="+" onclick="calculator.display.value=calculator.display.value+'+'"/></td>
+						</tr>
+						<tr>
+							<td ><input type="button" id="deleten" value="&#x232B;" onclick="var l=calculator.display.value.length; calculator.display.value=calculator.display.value.substring(0,l-1)"/></td>
+							<td><input type="button" value="C" onclick="calculator.display.value=null"/></td>
+						</tr>
+					</table>
+				</form>
+		</div>
+	</body>
+</html>
+calculator.html
+Displaying calculator.html.
